@@ -21,9 +21,9 @@ function! CurtineIncSw()
   endif
 
   if match(expand("%"), '\.c') > 0
-    let t:newIncSw=substitute(expand("%:t"), '\.c\(.*\)', '.h\1', "")
+    let t:newIncSw=substitute(expand("%:t"), '\.c\(.*\)', '.h', "")
   elseif match(expand("%"), "\\.h") > 0
-    let t:newIncSw=substitute(expand("%:t"), '\.h\(.*\)', '.c\1', "")
+    let t:newIncSw=substitute(expand("%:t"), '\.h\(.*\)', '.cpp', "")
   endif
 
   call FindInc()
